@@ -5,7 +5,8 @@
 - VS code is a popular text editor we will use to remotely connect to a remote server and copy over our files
 - Search up "VS code" in any browser and download it with your device's respective specifications (Mac, Windows, Linux, etc.)
 ![Image](https://i.imgur.com/G8g03vZ.png)
-___
+
+
 ## 2. Remotely Connecting
 - Open VS code and you should be greeted with a welcome page
 - At the very top of the screen, you can click terminal, and select new terminal
@@ -21,7 +22,7 @@ ssh cs15lwi22aju@ieng6.ucsd.edu
 - A successful login will display below
 ![Image](https://i.imgur.com/M9HFEvx.png)
 
-___
+
 ## 3. Trying some commands
 - Now that we are logged in, there are various commands we can try in the remote server! 
 - Note: There are many more but this table displays a few notable commands
@@ -39,8 +40,10 @@ ___
 |```exit``` |Exits the remote session|
 
 - Example of some commands being run
+
 ![Image](https://i.imgur.com/PJJDM93.png)
-___
+
+
 ## 4. Moving files with `scp`
 - We can move files from our client to the server using the `scp` command
 - Make sure you are not logged in to `ssh` for this step!
@@ -51,7 +54,8 @@ scp [File name] cs15lwi22aju@ieng6.ucsd.edu:~/
 ```
 ![Image](https://i.imgur.com/P6Sa38l.png)
 - As we can see, the file "WhereAmI.java" has been moved over onto my ieng6 account and can be run remotely!
-___
+
+
 ## 5. Setting an SSH Key
 - We can set an `ssh` key to log in to our ieng6 account without having to type in our password
 - If you are on Windows, see more steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
@@ -70,7 +74,8 @@ scp [file path of public key in your computer] cs15lwi22aju@ieng6.ucsd.edu:~/.ss
 ```
 - After, you should be able to log in without a password
 ![Image](https://i.imgur.com/La2mWkr.png)
-___
+
+
 ## 6. Optimizing Remote Runing
 - We can optimize remote running even further through the use of quotations and semicolons
 - Using quotes after a `ssh`, we can immediately run the command in quotations on the ieng6 server and exit!
@@ -84,7 +89,7 @@ javac WhereAmi.java; java WhereAmI
 - We can see a demonstration of both below--The two commands of "javac" and "java" are first separated with a semicolon meaning they will run consecutively. Next, both commands are surrounded by quotations meaning they will run once on the server before exiting automatically! 
 ![Image](https://i.imgur.com/fT3ebVS.png)
 
-___
+
 
 >Thank you for reading! 
 
