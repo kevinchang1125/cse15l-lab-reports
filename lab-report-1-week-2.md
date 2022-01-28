@@ -89,7 +89,17 @@ javac WhereAmi.java; java WhereAmI
 - We can see a demonstration of both below--The two commands of "javac" and "java" are first separated with a semicolon meaning they will run consecutively. Next, both commands are surrounded by quotations meaning they will run once on the server before exiting automatically! 
 ![Image](https://i.imgur.com/fT3ebVS.png)
 
-
+- If we were to run each command individually and without our automatic login: 
+    - Login to ssh (one line) `ssh cs15lwi22aju@ieng6.ucsd.edu`
+    - Type in our password (one line)
+    - Compile our file (one line) `javac WhereAmI.java`
+    - Run our file (one line) `java WhereAmI`
+- If we were to have each line ready, and counted copy paste "ctrl+c and ctr+v" as two keystrokes, and hitting enter as another keystroke, this would total 12 keystrokes!
+- Through what we learned however, we can combine all of the steps into one line as show in the image! If we just have the line below and copy paste it and hit enter, our total would only be 3 keystrokes:
+```
+ssh cs15lwi22aju@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI
+```
+- This saved me 11 seconds (with our improved version totaling at around just 2 seconds)!
 
 >Thank you for reading! 
 
