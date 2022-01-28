@@ -28,17 +28,18 @@
 - The bug is that the original Markdownparse file had no checking condition to see if there was an exclamation mark before the square brackets, meaning the link was actually an image--we fixed this by adding checking conditions that the character before the square bracket was an exclamation mark or by checking if the first character was an exclamation mark followed by square brackets as the first method would cause an out of bounds error if the exclamation mark was the first character in a line
 
 
-# Bug 3: 
-![Image]()
+# Bug 3: No Closed Paranthesis...
+![Image](https://i.imgur.com/ORJfWCG.png)
 
-Pick three code changes that your group worked on in labs 3 and 4 in order to fix a bug; these should be stored as commits on someone’s repository. Fork the repository so you have your own copy with all the work your group did if you haven’t already.
+### [Link to breaking file for Bug 3](https://github.com/Cubified/markdown-parse/blob/main/breaking_test_3.md)
 
-For each of the three code changes:
+### Output:
+```
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 4, end -1, length 6
+```
+- The failure inducing input does not contain the last closed parenthesis which would normally end a link
+- The bug is that the MarkdownParse assumes there will always be another closed parenthesis--we fix this by checking for all the brackets and parenthesis at the beginning of the file and updating our methods accordingly in case some or all are missing
+- The symptom is that if the read file has no closing parenthesis, the output as seen above, can result in an IndexOutOfBoundsException 
 
-Show a screenshot of the code change diff from Github (a page like this)
 
-Link to the test file for a failure-inducing input that prompted you to make that change
-
-Show the symptom of that failure-inducing input by showing the output of running the file at the command line for the version where it was failing (this should also be in the commit message history)
-
-Write 2-3 sentences describing the relationship between the bug, the symptom, and the failure-inducing input.
+>Thank you for reading!
