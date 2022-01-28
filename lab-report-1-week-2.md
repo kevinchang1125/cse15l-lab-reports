@@ -1,5 +1,5 @@
 # **Week 2 Lab Report:** Logging into `ieng6` remotely
->By Kevin Chang 1/13/202
+>By Kevin Chang 1/13/2022
 
 ## 1. Installing VScode
 - VS code is a popular text editor we will use to remotely connect to a remote server and copy over our files
