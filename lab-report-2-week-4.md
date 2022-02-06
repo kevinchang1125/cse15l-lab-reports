@@ -6,6 +6,11 @@
 
 ### [Link to breaking file for Bug 1](https://github.com/kevinchang1125/markdown-parse/blob/main/break.md)
 
+### Command run:
+```
+javac MarkdownParse.java
+java MarkdownParse break.md
+```
 ### Output:
 ```
 [https://something.com, some-page.html, is cool, some-page.html]
@@ -19,6 +24,11 @@
 
 ### [Link to breaking file for Bug 2](https://github.com/Cubified/markdown-parse/blob/main/test-file6.md)
 
+### Command run:
+```
+javac MarkdownParse.java
+java MarkdownParse test-file6.md
+```
 ### Output:
 ```
 [page.com]
@@ -33,6 +43,11 @@
 
 ### [Link to breaking file for Bug 3](https://github.com/Cubified/markdown-parse/blob/main/breaking_test_3.md)
 
+### Command run:
+```
+javac MarkdownParse.java
+java MarkdownParse breaking_test_3.md
+```
 ### Output:
 ```
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 4, end -1, length 6
