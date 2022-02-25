@@ -49,13 +49,17 @@ We expect as valid links:
 ![Image](https://i.imgur.com/0hM2JR9.png)
 
 # Snippet 1 MarkdownParse changes
-
+- To address backticks, I believe we would have to count their current position similar to how we track the positions of brackets and parentheses. 
+- I think this would be a more involved case and would take **more** than 10 lines since there are a multitude of cases such as just one backtick, backticks in the brackets, backticks in the parenthesis, and any combination where backticks are in and out of the two. 
+- While there would be some overlap when checking for all these cases, I still think this would take several if statements and would be over 10 lines.
 
 # Snippet 2 MarkdownParse changes
-
+- I think we can address this issue briefly since the only issue we would have to address would be the nested parentheses and brackets as the other issues we catch.
+- To make this fix, we would have to count the number of open parentheses (after brackets) and see if the number of closed parentheses match before taking the valid link within the outermost parentheses.
 
 # Snippet 3 MarkdownParse changes
-
+- I think this would also be a quick fix since we can just also search for `\n` when also parsing for brackets and parentheses.
+- Once we locate the `\n`, we can simply just skip those 2 characters and continue parsing for links and searching for another newline sequence if there are more in the file.
 
 
 
