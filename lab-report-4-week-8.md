@@ -1,12 +1,12 @@
 # **Week 8 Lab Report:** Additional MarkdownParse Tests
 >By Kevin Chang 2/25/2022
 
-## 1. Respositories Used:
-### Thursday 10 AM [Patoo](https://github.com/kevinchang1125/markdown-parse) (Mine)
+# Respositories Used:
+### **Thursday 10 AM** [Patoo](https://github.com/kevinchang1125/markdown-parse) (Mine)
 
-### Thursday 10 AM [Bull Mastiff](https://github.com/IncogOwl/markdown-parse) (Reviewed)
+### **Thursday 10 AM** [Bull Mastiff](https://github.com/IncogOwl/markdown-parse) (Reviewed)
 
-## 2. Valid links and what we expect for each test:
+# Valid links and what we expect for each test:
 
 ### Snippet 1
 ![Image](https://i.imgur.com/H3M9Mnr.png)
@@ -41,11 +41,22 @@ We expect as valid links:
 
 # Our implementation
 ## **All Tests Failed**
+```
+javac -cp .:lib/junit-4.13.2.jar:lib hamcrest-core-1.3.jar MarkdownParseTest.java
+
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+```
+
 ![Image](https://i.imgur.com/EjrmoAP.png)
 
 
 # Implementation we reviewed 
 ## **All Tests Failed**
+```
+javac -cp .:lib/junit-4.13.2.jar:lib hamcrest-core-1.3.jar MarkdownParseTest.java
+
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+```
 ![Image](https://i.imgur.com/0hM2JR9.png)
 
 # Snippet 1 MarkdownParse changes
@@ -54,8 +65,8 @@ We expect as valid links:
 - While there would be some overlap when checking for all these cases, I still think this would take several if statements and would be over 10 lines.
 
 # Snippet 2 MarkdownParse changes
-- I think we can address this issue briefly since the only issue we would have to address would be the nested parentheses and brackets as the other issues we catch.
-- To make this fix, we would have to count the number of open parentheses (after brackets) and see if the number of closed parentheses match before taking the valid link within the outermost parentheses.
+- I think we can address this issue briefly since the only issue we would have to address would be the nested parentheses as we catch the other issues of escaped and nested brackets.
+- To make this fix, we would have to count the number of open parentheses (after brackets) and see if the number of closed parentheses match before taking the valid link within the outermost parentheses (first and last instance of parentheses).
 
 # Snippet 3 MarkdownParse changes
 - I think this would also be a quick fix since we can just also search for `\n` when also parsing for brackets and parentheses.
